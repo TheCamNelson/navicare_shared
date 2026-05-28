@@ -40,3 +40,11 @@ export type {
   StoreTable,
 } from "./types.js";
 export { seedPatients, seedDeterministicPatients } from "./seed.js";
+
+// Supabase-backed store + generated DB types.
+// Server-only (pulls in supabase-js). Apps import directly from this subpath.
+export { SupabaseStore } from "./supabase-store.js";
+export type { SupabaseStoreOptions } from "./supabase-store.js";
+export type { Database, Json } from "./db.gen.js";
+export { logAudit } from "./audit.js";
+export type { AuditEvent, AuditActorType } from "./audit.js";

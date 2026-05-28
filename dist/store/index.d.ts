@@ -13,4 +13,9 @@ export declare function resetStore(): void;
 export { InMemoryStore };
 export type { DataStore, PatientCreateInput, EncounterCreateInput, QueueListFilter, StoreEventCallback, StoreTable, } from "./types.js";
 export { seedPatients, seedDeterministicPatients } from "./seed.js";
+export { SupabaseStore } from "./supabase-store.js";
+export type { SupabaseStoreOptions } from "./supabase-store.js";
+export type { Database, Json } from "./db.gen.js";
+export { logAudit } from "./audit.js";
+export type { AuditEvent, AuditActorType } from "./audit.js";
 //# sourceMappingURL=index.d.ts.map

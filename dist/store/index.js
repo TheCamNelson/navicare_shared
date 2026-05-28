@@ -24,4 +24,8 @@ export function resetStore() {
 }
 export { InMemoryStore };
 export { seedPatients, seedDeterministicPatients } from "./seed.js";
+// Supabase-backed store + generated DB types.
+// Server-only (pulls in supabase-js). Apps import directly from this subpath.
+export { SupabaseStore } from "./supabase-store.js";
+export { logAudit } from "./audit.js";
 //# sourceMappingURL=index.js.map
