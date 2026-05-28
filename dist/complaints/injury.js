@@ -1,0 +1,95 @@
+import { ComplaintCode } from "../types/complaint.js";
+import { CTASLevel } from "../types/triage.js";
+export const injuryConfig = {
+    code: ComplaintCode.INJURY,
+    label: "Injury or Trauma",
+    description: "Fall, accident, sports injury, cut, sprain, or broken bone",
+    defaultCTAS: CTASLevel.LEVEL_4,
+    questions: [
+        {
+            id: "injury_type",
+            prompt: "Type of injury?",
+            type: "single",
+            options: [
+                "Fall",
+                "Motor vehicle accident",
+                "Sports",
+                "Cut",
+                "Assault",
+                "Work injury",
+                "Other",
+            ],
+            required: true,
+        },
+        {
+            id: "body_part",
+            prompt: "Body part affected?",
+            type: "multi",
+            options: [
+                "Head",
+                "Neck-Spine",
+                "Chest",
+                "Abdomen",
+                "Arm-Hand",
+                "Leg-Foot",
+                "Back",
+                "Multiple",
+            ],
+            required: true,
+        },
+        {
+            id: "loc",
+            prompt: "Loss of consciousness?",
+            type: "single",
+            options: ["Yes", "No", "Not sure"],
+            required: true,
+        },
+        {
+            id: "movement",
+            prompt: "Can you move the injured area?",
+            type: "single",
+            options: ["Yes fully", "Limited", "Cannot move at all"],
+            required: true,
+        },
+        {
+            id: "deformity",
+            prompt: "Visible deformity?",
+            type: "yesno",
+            required: true,
+        },
+        {
+            id: "active_bleeding",
+            prompt: "Active bleeding?",
+            type: "single",
+            options: ["No", "Minor", "Moderate", "Severe (won't stop)"],
+            required: true,
+        },
+        {
+            id: "weight_bearing",
+            prompt: "Can you bear weight?",
+            type: "single",
+            options: ["Yes", "No", "N/A"],
+            required: true,
+        },
+        {
+            id: "numbness",
+            prompt: "Numbness or tingling below injury?",
+            type: "yesno",
+            required: true,
+        },
+        {
+            id: "tetanus",
+            prompt: "Last tetanus shot?",
+            type: "single",
+            options: ["< 5 years", "5-10 years", "> 10 years", "Don't know"],
+            required: true,
+        },
+        {
+            id: "blood_thinners",
+            prompt: "On blood thinners?",
+            type: "yesno",
+            required: true,
+        },
+    ],
+};
+//# sourceMappingURL=injury.js.map
